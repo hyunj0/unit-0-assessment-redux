@@ -111,10 +111,14 @@ public class Unit0Exercises {
         //      alternateS1AndS2Xtimes("abra", "cadabra", 2).equals("abracadabraabracadabra") == true
         //      alternateS1AndS2Xtimes("abra", "cadabra", 3).equals("abracadabraabracadabraabracadabra") == true
         String s1s2 = "";
-        for (int i = 0; i < x; i++) {
-            s1s2 = s1s2 + s1 + s2;
+        if (x <= 0) {
+            return "";
+        } else {
+            for (int i = 0; i < x; i++) {
+                s1s2 = s1s2 + s1 + s2;
+            }
+            return s1s2;
         }
-        return s1s2;
     }
 
     public static String stringSplit(String s, String splitOn) {
